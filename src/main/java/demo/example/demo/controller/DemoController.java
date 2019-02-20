@@ -24,6 +24,8 @@ public class DemoController {
 
     public String test;
 
+    private String test1, test2;
+
     /**
      * ユーザ情報一覧取得.
      *
@@ -38,6 +40,10 @@ public class DemoController {
         }
 
         List<User> user = userService.getUserList("test.user");
+
+        if (user.size() > 0) {
+            new NullPointerException();
+        }
 
         if (user.size() > 0) {
             new NullPointerException();
